@@ -8,17 +8,20 @@ class NotesListtview extends StatelessWidget {
     const Color.fromARGB(255, 247, 172, 197),
     const Color.fromARGB(255, 252, 221, 126),
     const Color.fromARGB(255, 154, 238, 197),
-    const Color.fromARGB(255, 99, 229, 247),
+    const Color.fromARGB(255, 144, 219, 230),
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(itemBuilder: (context, index) {
-      return Padding(
-        padding: const EdgeInsets.only(bottom: 24),
-        child: NoteItem(
-          noteColor: ListOfColor[index % ListOfColor.length],
-        ),
-      );
-    });
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: ListView.builder(itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 12),
+          child: NoteItem(
+            noteColor: ListOfColor[index % ListOfColor.length],
+          ),
+        );
+      }),
+    );
   }
 }
