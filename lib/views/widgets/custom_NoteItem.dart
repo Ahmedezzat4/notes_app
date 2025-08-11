@@ -12,13 +12,13 @@ class NoteItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: 24, bottom: 16),
+        padding: const EdgeInsets.only(left: 20, bottom: 12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
               title: Padding(
-                padding: const EdgeInsets.only(top: 24),
+                padding: const EdgeInsets.only(top: 16),
                 child: Text(
                   'Flutter Tips',
                   style: TextStyle(color: Colors.black, fontSize: 26),
