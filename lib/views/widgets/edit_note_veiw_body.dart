@@ -6,7 +6,7 @@ class EditNoteVeiwBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 4),
       child: Column(
         children: [
           SizedBox(
