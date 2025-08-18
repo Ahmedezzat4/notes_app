@@ -14,7 +14,7 @@ class SimpleBlocObserver implements BlocObserver {
 
   @override
   void onChange(BlocBase bloc, Change change) {
-    debugPrint('change = $bloc');
+    debugPrint('change = $change');
   }
 
   @override
@@ -29,6 +29,6 @@ class SimpleBlocObserver implements BlocObserver {
 
   @override
   void onCreate(BlocBase bloc) {
-    debugPrint('create = $bloc');
+    debugPrint('ahmed  create = $bloc');
   }
 }
