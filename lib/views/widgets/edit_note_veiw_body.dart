@@ -4,6 +4,7 @@ import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/custom_AppBar.dart';
 import 'package:notes_app/views/widgets/custom_textFeild.dart';
+import 'package:notes_app/views/widgets/editColor_editNote.dart';
 
 class EditNoteVeiwBody extends StatefulWidget {
   final NoteModel note;
@@ -49,6 +50,7 @@ class _EditNoteVeiwBodyState extends State<EditNoteVeiwBody> {
               content = value;
             },
           ),
+          EditNoteColorList(note: widget.note),
         ],
       ),
     );
