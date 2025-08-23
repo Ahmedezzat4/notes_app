@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/constans.dart';
 
 class CustomBotton extends StatelessWidget {
-  CustomBotton({super.key, this.onTap, this.isLoading = false});
+  const CustomBotton({super.key, this.onTap, this.isLoading = false});
   final void Function()? onTap;
   final bool isLoading;
   @override
@@ -18,12 +18,12 @@ class CustomBotton extends StatelessWidget {
         ),
         child: Center(
           child: isLoading
-              ? SizedBox(
+              ? const SizedBox(
                   height: 30,
                   width: 30,
                   child: CircularProgressIndicator(color: Colors.black),
                 )
-              : Text(
+              : const Text(
                   'add',
                   style: TextStyle(
                     color: Colors.black,

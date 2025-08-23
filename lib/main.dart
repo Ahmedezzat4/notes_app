@@ -12,10 +12,12 @@ void main() async {
   Bloc.observer = SimpleBlocObserver();
   Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox<NoteModel>(kNotesBox);
-  runApp(NotesApp());
+  runApp(const NotesApp());
 }
 
 class NotesApp extends StatelessWidget {
+  const NotesApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -23,7 +25,7 @@ class NotesApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
-        home: NotesView(),
+        home: const NotesView(),
       ),
     );
   }

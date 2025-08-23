@@ -5,6 +5,7 @@ import 'package:notes_app/cubits/Add_note_cubit/cubit/add_note_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/custom_botton.dart';
 import 'package:notes_app/views/widgets/custom_textFeild.dart';
+import 'package:notes_app/views/widgets/pick_colorList.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({super.key});
@@ -17,6 +18,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
   final GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   String? title, subtitle, formattedDate;
+  int? color;
   DateTime now = DateTime.now();
 
   @override
@@ -42,7 +44,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subtitle = value;
             },
           ),
-          const SizedBox(height: 50),
+
+          const PickColorlist(),
+
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
               return CustomBotton(
@@ -55,7 +59,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                       title: title!,
                       subTitle: subtitle!,
                       date: formattedDate!,
-                      color: Colors.amber.value,
+                      color: Colors.blue.value,
                     );
 
                     BlocProvider.of<AddNoteCubit>(context).addnNote(notModel);

@@ -4,7 +4,7 @@ import 'package:notes_app/views/widgets/Add_noteBottomSheet.dart';
 import 'widgets/notes_view_body.dart';
 
 class NotesView extends StatelessWidget {
-  const NotesView({Key? key}) : super(key: key);
+  const NotesView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +20,13 @@ class NotesView extends StatelessWidget {
             ),
             context: context,
             builder: (context) {
-              return addNoteBottumSheet();
+              return const AddNoteBottumSheet();
             },
           );
         },
-        child: Icon(Icons.add, color: Colors.white),
+        child: const Icon(Icons.add, color: Colors.white),
       ),
-      body: NotesViewBody(),
+      body: const NotesViewBody(),
     );
   }
 }

@@ -18,8 +18,8 @@ class CustomAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(title, style: TextStyle(fontSize: 28, color: Colors.white)),
-        Spacer(),
+        Text(title, style: const TextStyle(fontSize: 28, color: Colors.white)),
+        const Spacer(),
         CustomIcon(onPressed: onPressed, icon: icon),
       ],
     );

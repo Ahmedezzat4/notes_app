@@ -5,14 +5,14 @@ import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/custom_NoteItem.dart';
 
 class NotesListtview extends StatelessWidget {
-  NotesListtview({super.key});
+  const NotesListtview({super.key});
 
-  final ListOfColor = [
-    const Color.fromARGB(255, 247, 172, 197),
-    const Color.fromARGB(255, 252, 221, 126),
-    const Color.fromARGB(255, 154, 238, 197),
-    const Color.fromARGB(255, 144, 219, 230),
-  ];
+  // final ListOfColor = [
+  //   const Color.fromARGB(255, 247, 172, 197),
+  //   const Color.fromARGB(255, 252, 221, 126),
+  //   const Color.fromARGB(255, 154, 238, 197),
+  //   const Color.fromARGB(255, 144, 219, 230),
+  // ];
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<NotesCubit, NotesState>(
@@ -21,7 +21,7 @@ class NotesListtview extends StatelessWidget {
             BlocProvider.of<NotesCubit>(context).notes ?? [];
 
         return Padding(
-          padding: EdgeInsets.only(bottom: 12),
+          padding: const EdgeInsets.only(bottom: 12),
           child: ListView.builder(
             itemCount: notes.length,
 
@@ -31,7 +31,7 @@ class NotesListtview extends StatelessWidget {
                 child: NoteItem(
                   note: notes[index],
 
-                  noteColor: ListOfColor[index % ListOfColor.length],
+                  // noteColor: ListOfColor[index % ListOfColor.length],
                 ),
               );
             },
